@@ -85,6 +85,13 @@ service ssh restart
 service dropbear restart
 
 
+cd
+sudo apt-get update
+sudo rm /etc/default/dropbear
+sudo wget https://raw.githubusercontent.com/Panuwatbank/wgt-bank/master/dropbear -O /etc/default/dropbear
+/etc/init.d/dropbear restart
+/etc/init.d/dropbear start
+
 rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/listar /bin/sshmonitor /bin/ajuda > /dev/null
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh > /dev/null
 apt-get install squid3 bc screen nano unzip dos2unix wget -y
