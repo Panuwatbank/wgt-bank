@@ -1,47 +1,44 @@
 #!/bin/bash
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "VPS Manager 2.0.1" ; tput sgr0
 tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
-echo "● ติดตั้ง และ ตั้งค่าพร็อกซี ปลาหมึกไว้ที่ 80, 3128, 8080 e 8000" ; echo "
-echo "● กำหนดค่า OpenSSH เพื่อเรียกใช้พอร์ต 22 กับ 143" กำหนดค่า Dropbear เพื่อเรียกใช้พอร์ต 110" ; tput sgr0
+echo "● การติดตั้งและกำหนดค่าพร็อกซีปลาหมึกบนพอร์ต 80, 3128, 8080 และ 8000" ; echo "  para เพื่อให้การเชื่อมต่อ SSH กับเซิร์ฟเวอร์นี้"
+echo "● กำหนดค่า OpenSSH เพื่อให้ทำงานบนพอร์ต 22 และ 143 "
+echo "● กำหนดค่า dropbear ในพอรฺ์ต 109
+echo "● ติดตั้งชุดสคริปต์เป็นคำสั่งระบบสำหรับการจัดการผู้ใช้" ; tput sgr0
 echo ""
-echo "● ติดตั้ง ชุดของสคริปต์ เป็นคำสั่ง ระบบสำหรับการจัดการผู้ใช้ เย็ดเข้ " ; tput sgr0
-echoecho ""
-tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte กดปุ่มใดก็ได้เพื่อดำเนินการต่อ..." ; echo "" ; echo "" ; tput sgr0
+tput setaf 3 ; tput bold ; read -n 1 -s -p "กด"Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
 tput setaf 2 ; tput bold ; echo "	Termos de Uso" ; tput sgr0
 echo ""
-echo "Ao เมื่อใช้ 'VPS Manager 2.0' คุณยอมรับข้อกำหนดการใช้งานต่อไปนี้:"
+echo "เมื่อใช้ 'VPS Manager 2.0' คุณ 
+คุณยอมรับข้อกำหนดการใช้งานต่อไปนี้:"
 echo ""
-echo "1.คุณสามารถ:"ติดตั้งและใช้ 'VPS Manager 2.0' 
-echo "2 บนเซิร์ฟเวอร์ของคุณบนเซิร์ฟเวอร์ของคุณ
-echo "3 สร้างจัดการและนำออกผู้ใช้จำนวนไม่จำกัด จำนวนผ่านชุดสคริปต์นี้."
-echo " 
-echo "
-echo "
-
+echo "1. คุณสามารถ:"
+echo "a. ติดตั้งและใช้ 'VPS Manager 2.0' บนเซิร์ฟเวอร์ของคุณ (s)(es)."
+echo "b. สร้างจัดการและลบผู้ใช้จำนวนไม่ จำกัด จำนวนผ่านชุดสคริปต์นี้ ผู้ใช้ไม่ จำกัด ผ่านชุดสคริปต์นี้."
 echo ""
-tput setaf 3 ; tput bold ; read -n 1 -s -p "กดปุ่มใดก็ได้เพื่อดำเนินการต่อ..."" ; echo "" ; echo "" ; tput sgr0
-echo "2.ห้ามดัดแปลง หรือ เอาไป ปรับเปลี่ยน แก้เป็นจุด เพื่อให้คุณมีลักษณะเหมือนนักพัฒนาสคริปต์:"
-echo "3  คุณไม่สามารถ  แก้ไขแก้ไขแชร์หรือจัดแจกจ่ายใหม่ )"
-
-
+tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte กุญแจสำคัญใด ๆ เพื่อดำเนินการต่อ..." ; echo "" ; echo "" ; สคริปต์0
+echo "2. คุณไม่สามารถ:"
+echo "a. แก้ไขแก้ไขแชร์หรือแจกจ่ายต่อ (ฟรีหรือเชิงพาณิชย์)"
+echo "ชุดสคริปต์นี้โดยไม่ได้รับอนุญาตจากผู้พัฒนาซอฟต์แวร์."
+echo "b. ชุดสคริปต์นี้โดยไม่ได้รับอนุญาตจากผู้พัฒนาซอฟต์แวร์ scripts."
 echo ""
-echo "3. คุณยอมรับไหม :"
-echo "a. O valor pago por esse conjunto de scripts não inclui garantias ou suporte adicional,"
-echo "porém o usuário poderá, de forma promocional e não obrigatória, por tempo limitado,"
-echo "receber suporte e ajuda para solução de problemas desde que respeite os termos de uso."
-echo "b. O usuário desse conjunto de scripts é o único resposável por qualquer tipo de implicação"
-echo "ética ou legal causada pelo uso desse conjunto de scripts para qualquer tipo de finalidade."
+echo "3.คุณไม่สามารถ:"
+echo "a. จำนวนเงินที่จ่ายสำหรับชุดสคริปต์นี้ไม่รวมการรับประกันหรือการสนับสนุนเพิ่มเติม,"
+echo "จำนวนเงินที่สำลักการะการ,"
+echo "ได้รับความช่วยเหลือและแก้ไขปัญหาตราบใดที่คุณเคารพเงื่อนไขการใช้งาน."
+echo "b. O ผู้ใช้สคริปต์ชุดนี้เป็นผู้รับผิดชอบ แต่เพียงผู้เดียวสำหรับประเภทใด ๆ"
+echo "ลักษณะทางจริยธรรมหรือกฎหมายที่เกิดจากการใช้สคริปต์ชุดนี้เพื่อจุดประสงค์ใด ๆ."
 echo ""
-tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
-echo "4. Você concorda que o desenvolvedor não se responsabilizará pelos:"
-echo "a. Problemas causados pelo uso dos scripts distribuídos sem autorização."
-echo "b. Problemas causados por conflitos entre este conjunto de scripts e scripts de outros desenvolvedores."
-echo "c. Problemas causados por edições ou modificações do código do script sem autorização."
-echo "d. Problemas do sistema causados por programas de terceiro ou modificações/experimentações do usuário."
-echo "e. Problemas causados por modificações no sistema do servidor."
-echo "f. Problemas causados pelo usuário não seguir as instruções da documentação do conjunto de scripts."
-echo "g. Problemas ocorridos durante o uso dos scripts para obter lucro comercial."
-echo "h. Problemas que possam ocorrer ao usar o conjunto de scripts em sistemas que não estão na lista de sistemas testados."
+tput setaf 3 ; tput bold ; read -n 1 -s -p "กดปุ่มใดก็ได้เพื่อดำเนินการต่อ..." ; echo "" ; echo "" ; tput sgr0
+echo "4. คุณยอมรับว่านักพัฒนาซอฟต์แวร์จะไม่รับผิดชอบต่อ: ":"
+echo "a. ปัญหาที่เกิดจากการใช้สคริปต์แจกจ่ายที่ไม่ได้รับอนุญาต."
+echo "b. ปัญหาที่เกิดจากความขัดแย้งระหว่างสคริปต์ชุดนี้กับสคริปต์จากนักพัฒนาซอฟต์แวร์คนอื่น ๆ."
+echo "c. ปัญหาที่เกิดจากการแก้ไขหรือปรับเปลี่ยนโค้ดสคริปต์ที่ไม่ได้รับอนุญาต."
+echo "d. ปัญหาของระบบที่เกิดจากโปรแกรมของ บริษัท อื่นหรือการแก้ไข / ทดลองใช้ของผู้ใช้."
+echo "e. ปัญหาที่เกิดจากการปรับเปลี่ยนระบบเซิร์ฟเวอร์."
+echo "f. ปัญหาที่เกิดจากผู้ใช้ไม่ทำตามคำแนะนำในเอกสารชุดสคริปต์."
+echo "g. ปัญหาที่เกิดขึ้นขณะใช้สคริปต์เพื่อประโยชน์ทางการค้า "."
+echo "h. ปัญหาที่เกิดขึ้นขณะใช้สคริปต์เพื่อประโยชน์ทางการค้า "."
 echo ""
 tput setaf 3 ; tput bold ; read -n 1 -s -p "Aperte qualquer tecla para continuar..." ; echo "" ; echo "" ; tput sgr0
 IP=$(wget -qO- ipv4.icanhazip.com)
@@ -189,10 +186,10 @@ then
 fi
 echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Squid ติดตั้ง ให้ ใช้งาน ใน พอร์ต: 80, 3128, 8080 e 8000" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "SSH dropbear rodando nas portas 22 e 143,109 110" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Scripts para gerenciamento de usuário instalados" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "Leia a documentação para evitar dúvidas e problemas!" ; tput sgr0
-tput setaf 7 ; tput setab 4 ; tput bold ; echo "ParaPara ver os comandos disponíveis use o comando: ajuda" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "SSH dropbear ทำงานบนพอร์ต 22 และ 143,109" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "สคริปต์สำหรับการจัดการผู้ใช้ที่ติดตั้ง" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "อ่านเอกสารเพื่อหลีกเลี่ยงข้อสงสัยและปัญหา!!" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; echo "เมื่อต้องการดูคำสั่งที่พร้อมใช้งานให้ใช้คำสั่ง: help: ajuda" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "เสร็จแล้ว ไอ้เหี้ย ไอ้สัส เลว"
 echo ""
 if [[ "$optiondb" = '2' ]]; then
